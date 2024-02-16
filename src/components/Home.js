@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './../css/Home.css'
 import { Link } from 'react-router-dom';
-
+import Alert from 'react-bootstrap/Alert';
 import emailjs from '@emailjs/browser';
 
 import planta_img1 from './../imgs/planta_img1.jpg';
