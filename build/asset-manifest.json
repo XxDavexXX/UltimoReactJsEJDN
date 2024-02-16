@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e06b5b7b.css",
+    "main.js": "/static/js/main.d8098df3.js",
+    "static/js/787.38f16daf.chunk.js": "/static/js/787.38f16daf.chunk.js",
+    "static/media/planta_img8.jpg": "/static/media/planta_img8.d2ccd04a53b559774486.jpg",
+    "static/media/numero_tres_nosotros.png": "/static/media/numero_tres_nosotros.c6d9b64ce028d9adf7b0.png",
+    "static/media/numero_cuatro_nosotros.png": "/static/media/numero_cuatro_nosotros.2c984b79e801394b360c.png",
+    "static/media/numero_dos_nosotros.png": "/static/media/numero_dos_nosotros.52495701c5a1ff3cf2c0.png",
+    "static/media/plantas_nosotros.webp": "/static/media/plantas_nosotros.004890538c8dd21bbbac.webp",
+    "static/media/numero_uno_nosotros.png": "/static/media/numero_uno_nosotros.2a7edb31fc4027d0f673.png",
+    "static/media/img_planta_uno_eventos.webp": "/static/media/img_planta_uno_eventos.bbad61083bbe99415c43.webp",
+    "static/media/header_home.jpg": "/static/media/header_home.3d60bd222bcf7e19d366.jpg",
+    "static/media/planta_compromiso.webp": "/static/media/planta_compromiso.e2109e58be9237bc3bc7.webp",
+    "static/media/imguno.jpg": "/static/media/imguno.daaf44998e6a120c3495.jpg",
+    "static/media/bg-img-1.jpg": "/static/media/bg-img-1.be529fe63dee35e140b9.jpg",
+    "static/media/imagen_nosotros.png": "/static/media/imagen_nosotros.9c9870d805ba62205842.png",
+    "static/media/logoHomeNaru2.png": "/static/media/logoHomeNaru2.5c74541e38be01c4b55f.png",
+    "static/media/planta_img3.jpg": "/static/media/planta_img3.56315388feba5241992d.jpg",
+    "static/media/imgcuatro.webp": "/static/media/imgcuatro.f6b948573497fd081ce9.webp",
+    "static/media/accsesorio_dos.webp": "/static/media/accsesorio_dos.d3b1b7831f6fdf92efbf.webp",
+    "static/media/planta_img7.jpg": "/static/media/planta_img7.592ed2492ee823e0fdb7.jpg",
+    "static/media/planta_img1.jpg": "/static/media/planta_img1.6de6d1ac0c4cce009490.jpg",
+    "static/media/header.jpg": "/static/media/header.2186c379771688abae52.jpg",
+    "static/media/accsesorio_tres.webp": "/static/media/accsesorio_tres.2b8559cc3e8aefc885da.webp",
+    "static/media/planta_img9.webp": "/static/media/planta_img9.6b6655addad9235cbe42.webp",
+    "static/media/accesorio_uno.webp": "/static/media/accesorio_uno.7b1134b2bdc25795ca97.webp",
+    "static/media/planta_img4.jpeg": "/static/media/planta_img4.68422c4222e0b276fbf2.jpeg",
+    "static/media/imgtres.jpeg": "/static/media/imgtres.b887ecc07423f918055a.jpeg",
+    "static/media/planta_img5.jpeg": "/static/media/planta_img5.a44da594dab538949882.jpeg",
+    "index.html": "/index.html",
+    "main.e06b5b7b.css.map": "/static/css/main.e06b5b7b.css.map",
+    "main.d8098df3.js.map": "/static/js/main.d8098df3.js.map",
+    "787.38f16daf.chunk.js.map": "/static/js/787.38f16daf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e06b5b7b.css",
+    "static/js/main.d8098df3.js"
+  ]
+}

@@ -1,0 +1,576 @@
+.call_to_action {
+    height: 68px;
+    background-color: #1D5B27;
+    width: 100%;
+    position: fixed;
+    top:0px;
+    z-index: 10000;
+  }
+
+.contenedor_log_sign_flex{
+  display: flex;
+}
+
+.superponer_offcanvas{
+  z-index: 10001;
+}
+
+
+.content_logo_navbar {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 15px;
+    position: static;
+    /* z-index: 10000; */
+    top:50px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    /* border-bottom: 1px solid #1D5B27; */
+  }
+
+
+
+.call_to_action {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .content_num {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: 20px;
+  }
+  
+  .content_num img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .content_num div {
+    margin-left: 10px;
+    color: #fff;
+  }
+  
+  .content_num_dos {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .content_num_dos div {
+    display: flex;
+    align-items: center;
+    font-size: 33px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #fff;
+  }
+  
+  .content_num_tres {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .content_num_tres img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  
+  .content_num_tres div {
+    margin-left: 10px;
+    color: #fff;
+  }
+
+
+/* Flores boton */
+
+.content_num_cuatro {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 12em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0px solid black;
+  }
+  
+  .wrapper {
+    height: 1.5em;
+    width: 8em;
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text {
+    /* font-size: 17px; */
+    z-index: 1;
+    color: #04997e;
+    display: flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.85);
+    transition: all 0.5s ease;
+  }
+  
+  .flower {
+    display: grid;
+    grid-template-columns: 1em 1em;
+    position: absolute;
+    transition: grid-template-columns 0.8s ease;
+  }
+  
+  .flower1 {
+    top: -12px;
+    left: -13px;
+    transform: rotate(5deg);
+  }
+  
+  .flower2 {
+    bottom: -5px;
+    left: 8px;
+    transform: rotate(35deg);
+  }
+  
+  .flower3 {
+    bottom: -15px;
+    transform: rotate(0deg);
+  }
+  
+  .flower4 {
+    top: -14px;
+    transform: rotate(15deg);
+  }
+  
+  .flower5 {
+    right: 11px;
+    top: -3px;
+    transform: rotate(25deg);
+  }
+  
+  .flower6 {
+    right: -15px;
+    bottom: -15px;
+    transform: rotate(30deg);
+  }
+  
+  .petal {
+    height: 1em;
+    width: 1em;
+    border-radius: 40% 70% / 7% 90%;
+    background: linear-gradient(#07d795, #93eeda);
+    border: 0.5px solid #96ecdc;
+    z-index: 0;
+    transition: width 0.8s ease, height 0.8s ease;
+  }
+  
+  .two {
+    transform: rotate(90deg);
+  }
+  
+  .three {
+    transform: rotate(270deg);
+  }
+  
+  .four {
+    transform: rotate(180deg);
+  }
+  
+  .btn:hover .text {
+    color: #04997e;
+  }
+  
+  .btn:hover .petal {
+    background: linear-gradient(#04997e, #06b897);
+    border: 0.5px solid #07d7b1;
+  }
+  
+  .btn:hover .flower {
+    grid-template-columns: 1.5em 1.5em;
+  }
+  
+  .btn:hover .flower .petal {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  
+  .btn:hover .text {
+    background: rgba(255, 255, 255, 0.85);
+  }
+  
+  .div_cuatro_uno {
+    margin-left: 20px;
+  }
+  
+  .btn:hover div.flower1 {
+    animation: 15s linear 0s normal none infinite running flower1;
+  }
+  
+  @keyframes flower1 {
+    0% {
+      transform: rotate(5deg);
+    }
+  
+    100% {
+      transform: rotate(365deg);
+    }
+  }
+  
+  .btn:hover div.flower2 {
+    animation: 13s linear 1s normal none infinite running flower2;
+    color: #fff;
+  }
+  
+  @keyframes flower2 {
+    0% {
+      transform: rotate(35deg);
+    }
+  
+    100% {
+      transform: rotate(-325deg);
+    }
+  }
+  
+  .text:hover {
+    color: #ffffff;
+  }
+  
+  .btn:hover div.flower3 {
+    animation: 16s linear 1s normal none infinite running flower3;
+  }
+  
+  @keyframes flower3 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .btn:hover div.flower4 {
+    animation: 17s linear 1s normal none infinite running flower4;
+  }
+  
+  @keyframes flower4 {
+    0% {
+      transform: rotate(15deg);
+    }
+  
+    100% {
+      transform: rotate(375deg);
+    }
+  }
+  
+  .btn:hover div.flower5 {
+    animation: 20s linear 1s normal none infinite running flower5;
+  }
+  
+  @keyframes flower5 {
+    0% {
+      transform: rotate(25deg);
+    }
+  
+    100% {
+      transform: rotate(-335deg);
+    }
+  }
+  
+  .btn:hover div.flower6 {
+    animation: 15s linear 1s normal none infinite running flower6;
+  }
+  
+  @keyframes flower6 {
+    0% {
+      transform: rotate(30deg);
+    }
+  
+    100% {
+      transform: rotate(390deg);
+    }
+  }
+  
+
+  .active{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #1D5B27;
+  }
+
+
+
+/* Estilos del navbar */
+
+.navbar_div_blanco {
+    background-color: #ffffff;
+    padding: 15px 0;
+    margin-top: 80px;
+  }
+  
+  .img_logo {
+    height: 120px;
+    width: 300px;
+  }
+  
+  .navbar-items {
+    list-style-type: none;
+    margin-top: 15px;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+  }
+  
+  .navbar-item {
+    text-decoration: none;
+  }
+  
+  .navbar-list {
+    color: #1D5B27;
+    margin: 15px 25px;
+    text-decoration: none;
+  }
+  
+  .navbar-list:hover {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #1D5B27;
+  }
+
+  .responsive_content_nums{
+    display: none;
+  }
+
+  .a_nav_celular:hover{
+    border-bottom: 1px solid #1D5B27;
+  }
+  /* Responsive Navbar  */
+
+  @media (max-width: 1150px) {
+    /* Nuevo Contenedor bloque de div verde del inicio  */
+    .responsive_content_nums{
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Contenedor de los telefono y ubicacion  */
+
+    .responsive_content_nums_div{
+      display: flex;
+    }
+    
+    /* Contenedor Telefono  */
+    .responsive_content_num{
+      display: flex;
+      height: 100%;
+      align-items: center;
+      margin-left: 8px;
+    }
+    
+    .responsive_content_num img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .call_to_action{
+      height: 85px;
+    }
+    
+    .responsive_content_num div {
+      margin-left: 10px;
+      color: #fff;
+    }
+    /* Contenedor Direccion  */
+
+    .responsive_content_num_tres{
+      display: flex;
+      height: 100%;
+      align-items: center;
+      margin-left: 8px;
+
+    }
+
+    .responsive_content_num_tres img {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .responsive_content_num_tres div {
+      margin-left: 10px;
+      color: #fff;
+    }
+
+    /* Contenedor |  */
+
+    .responsive_content_num_dos div {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      margin-left: 0px;
+      margin-right: 5px;
+      color: #fff;
+    }
+
+    /* Eliminare telefono y direccion del div verde no responsivo por el momento  */
+    .content_num, .content_num_dos, .content_num_tres{
+      display: none;
+    }
+
+    /* Subir el navbar a  la altura ideal  */
+    .navbar_div_blanco {
+      background-color: #ffffff;
+      padding: 15px 0;
+      margin-top: 180px;
+    }
+    
+  }
+
+  @media (max-width: 1050px){
+    .navbar-items{
+      width: 100%;
+    }
+
+
+  }
+
+  @media (max-width: 860px) {
+
+    /* Eliminare telefono y direccion del div verde no responsivo por el momento  */
+    .call_to_action, .ul_normal_inicio_completo{
+      display: none;
+    }
+
+    /* Exponderos los componentes a las esquinas para mejorar el campo de vision  */
+
+
+    .responsive_siete_ochenta_navbar{
+      height: 70px !important;
+    }
+
+    /* Contenedor imagen de home  */
+    .content_logo_navbar {
+      width: 100%;
+      background-color: #fff;
+      margin-top: 15px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 30px;
+      /* border-bottom: 1px solid #1D5B27; */
+    }
+
+
+    .nav-link {
+       padding-top: 20px !important;
+       font-family: a !important;
+       font-size: 24px !important;
+       font-weight: 500 !important;
+    }
+
+    .active_link_this{
+      color: #1D5B27 !important;
+    }
+
+    .content_num_cuatro_responsive_siete_ochenta{
+      display: flex;
+      height: 50% !important;
+      align-items: flex-end;
+    }
+
+    .contenedor_ul_siete_ochenta{
+      height: 50% !important;
+    }
+
+    .btn_flores_log{
+      margin-bottom: 20px !important;
+    }
+
+    .navbar_div_blanco {
+      background-color: #ffffff;
+      padding: 15px 0;
+      margin-top: 140px;
+  }
+
+  .offcanvas-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end !important;
+  }
+    
+  }
+
+  .btn_go_register_form{
+    text-decoration: none;
+  }
+
+  .btn_cerrar_sesion{
+    background-color:rgb(220, 12, 12);
+  }
+
+  .direccion-form {
+    --main-focus: #000000;
+    --font-color: #ffffff;
+    --font-color-sub: #666;
+    --bg-color: #ffffff;
+    --main-color: #6c776d;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    box-shadow: 4px 4px var(--main-color);
+  }
+
+  .direccion-input, .telefono-input, .nombre-input {
+    width: 100%;
+    height: 100%;
+    padding: 0px 10px !important;
+    border: 2px solid var(--main-color) !important;
+    border-right: 0 !important;
+    margin: 0 !important;
+    border-radius: 5px 0 0 5px !important;
+    font-size: 15px !important;
+    font-weight: 500;
+    color: #222 !important;
+    background: var(--bg-color) !important;
+  }
+  
+  .direccion-btn {
+    width: 100px;
+    height: 100%;
+    border: 2px solid var(--main-focus);
+    border-radius: 0 5px 5px 0;
+    background-color: var(--main-focus);
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: var(--font-color);
+    cursor: pointer;
+  }
+  
+  .direccion-input:focus {
+    outline: none;
+    border: 2px solid var(--main-focus);
+    border-right: 0;
+  }
+  
+
+  

@@ -1,0 +1,217 @@
+.contendor_form_register_total{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden !important;
+}
+
+.video_fondo_form_register {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.container_form_register {
+    z-index: 1;
+    width: 500px;
+    height: 700px;
+    background: #f8fdf87b;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 35px;
+    border: 5px solid rgb(255, 255, 255);
+    margin: 20px;
+  }
+  
+  .heading_form_register {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(20, 74, 25);
+  }
+  
+  .form_form_register {
+    margin-top: 20px;
+    height: auto !important;
+    width: 100%;
+  }
+  
+  .form_form_register .input_form_register {
+    width: 100%;
+    background: white;
+    color:rgb(20, 74, 25);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    border-inline: 2px solid transparent;
+  }
+  
+  .form_form_register .input_form_register::-moz-placeholder {
+    color: rgb(18, 77, 17)!important;
+  }
+  
+  .form_form_register .input_form_register::placeholder {
+    color: rgb(22, 80, 21) !important;
+  }
+  
+  .form_form_register .input_form_register:focus {
+    outline: none;
+    border-inline: 2px solid #0e4516;
+  }
+  
+  .form_form_register .forgot-password {
+    display: block;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  
+  .form_form_register .forgot-password .a_form_register {
+    margin-top: 10px !important;
+    font-size: 16px;
+    color: rgb(20, 74, 25);
+    text-decoration: none;
+  }
+  
+  .form_form_register .login-button {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(17, 90, 28) 0%, rgb(5, 84, 17)00%);
+    color: white;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form_form_register .login-button:hover {
+    transform: scale(1.03);
+  }
+  
+  .form_form_register .login-button:active {
+    transform: scale(0.95);
+  }
+  
+  .social-account-container {
+    margin-top: 25px;
+  }
+  
+  .social-account-container .title_form_register {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(24, 79, 22);
+    font-weight: 900;
+  }
+  
+  .social-account-container .social-accounts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+  }
+  
+  .social-account-container .social-accounts .social-button {
+    background: linear-gradient(45deg, rgb(38, 137, 27) 0%, rgb(94, 197, 90) 100%);
+    border: 5px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .social-account-container .social-accounts .social-button .svg {
+    fill: white;
+    margin: auto;
+  }
+  
+  .social-account-container .social-accounts .social-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .social-account-container .social-accounts .social-button:active {
+    transform: scale(0.9);
+  }
+  
+  .agreement {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .agreement a {
+    text-decoration: none;
+    color: #184c10;
+    font-size: 14px;
+  }
+
+  /* Alerta de registro exitoso en la web  */
+
+  .contenedor_alert_registro_exitoso{
+    top: 50px;
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+  }
+
+  .alerta_registro_exitoso{
+    position: absolute;
+    top: 0px;
+    animation: wiggle 3.2s linear infinite;
+  }
+
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+
+  .link_regresar_home{
+    color: #184c10;
+  }
+
+  .span_log_in_go{
+    color: #184c10;
+  }
+
+  .direccionar_login_page{
+    border-bottom: 1px solid #184c10;
+  }
+  
+  .forgot_password_link:hover{
+    border-bottom: 1px solid #184c10;
+  }
