@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import './../css/PagarPage.css'
 import QR_YAPE from './../imgs/qr_yape.jpeg'
 import emailjs from '@emailjs/browser';
