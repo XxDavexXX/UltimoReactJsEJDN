@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from "react-router-dom";
+import Alert from 'react-bootstrap/Alert';
 import './../css/PagarPage.css'
 import QR_YAPE from './../imgs/qr_yape.jpeg'
 import emailjs from '@emailjs/browser';
@@ -21,12 +22,14 @@ function PagarPage(){
     const { macetaplanta } = useParams();
     const [planta, setPlanta] = useState(null);
     const [showAlert, setShowAlert] = useState(false);
+    const [showAlert2, setShowAlert2] = useState(false);
     const [maceta, setMaceta] = useState(null);
     const [idmaceta, setIdMaceta] = useState(null);
     const [plantamaceta, setPlantaMaceta] = useState(null);
     const [user, setUser] = useState(null);
     const [datosUsuario, setDatosUsuarios] = useState(false);
     const [uid_cod, setUidCod] = useState(false);
+    const [buttonDisabled, setButtonDisabled] = useState(false);
 
     // const [loading, setLoading] = useState(true);
     const [cantidad, setCantidad] = useState(1);
@@ -82,7 +85,7 @@ function PagarPage(){
                 .then((response) => response.json())
                 .then((data) => setDatosUsuarios(data))
                 .catch((error) => {
-                    console.log(error); // Cambiar loading a false en caso de error
+                    console.log(error);
                 });
         }
     }, [uid_cod]);
@@ -92,17 +95,16 @@ function PagarPage(){
       .then((response) => response.json())
       .then((data) => setPlanta(data))
       .catch((error) => {
-        console.log(error);// Cambiar loading a false en caso de error
+        console.log(error);
     });
   }, [id, categoria]);
   console.log(maceta);
-//   console.log(cantidad);
 
     const form = useRef();
 
     const sendEmail = (e) => {
       e.preventDefault();
-
+      setButtonDisabled(true);
       emailjs
         .sendForm('service_q7yi996', 'template_3tfletq', form.current, {
           publicKey: 'oLMOSMnzsCqsfBCVy',
@@ -110,9 +112,11 @@ function PagarPage(){
         .then(
           () => {
             console.log('SUCCESS!');
+            setShowAlert2(true)
           },
           (error) => {
             console.log('FAILED...', error.text);
+            setButtonDisabled(false);
           },
         );
     };
@@ -122,7 +126,7 @@ function PagarPage(){
     const handleFormSubmit = (event) => {
         if (isUserDataValid == false) {
             setShowAlert(true);
-            event.preventDefault(); // Evita que el formulario se envíe si los datos del usuario no son válidos
+            event.preventDefault();
         }
     };
 
@@ -136,6 +140,15 @@ function PagarPage(){
                     </Alert>
                 </div>
             )}
+
+        {showAlert2 && (
+                <div className="contenedor_alert_registro_exitoso">
+                    <Alert key={"success"} className="alerta_form_mal_datos_usuarios" variant={"success"} onClose={() => setShowAlert(false)} dismissible>
+                        
+                        Correo de compra completada enviada exitosamente.<Link className="link_regresar_home" to="/">Click aquí</Link> para regresar.
+                    </Alert>
+                </div>
+        )}
 
             <Navbar />    
 
@@ -245,7 +258,7 @@ function PagarPage(){
                                     <input type="text" id="precio_unidad" hidden value={planta ? (Number(planta.precio) + Number(plantamaceta ? plantamaceta.maceta_precio : 0.00)).toFixed(2) : 'Cargando...'} name="user_precio_unidad" required />
                                     <input type="text" id="precio_subtotal" hidden value={planta && plantamaceta ? ((Number(planta.precio) + Number(plantamaceta ? plantamaceta.maceta_precio : 0.00)) * cantidad).toFixed(2) : 'Cargando...'} name="user_precio_subtotal" required />
                                     <input type="text" id="precio_total" hidden value={planta && plantamaceta ? (((Number(planta.precio) + Number(plantamaceta ? plantamaceta.maceta_precio : 0.00)) * cantidad) + delivery).toFixed(2) : 'Cargando...'} name="user_precio_total" required />
-                                        <button className='button_pp_btn_pagar_yape'>
+                                        <button className='button_pp_btn_pagar_yape' disabled={buttonDisabled}>
                                             <span> <input style={{width:'100%', background:'#2a8d7e',color:'#fff', border:'none'}} type="submit" value="Confirmar Pago y Enviar Detalles" onClick={handleFormSubmit}/> </span>
                                         </button>
                                     </form>
