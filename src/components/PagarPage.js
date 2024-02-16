@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from "react-router-dom";
-import Alert from 'react-bootstrap/Alert';
 import './../css/PagarPage.css'
 import QR_YAPE from './../imgs/qr_yape.jpeg'
 import emailjs from '@emailjs/browser';
