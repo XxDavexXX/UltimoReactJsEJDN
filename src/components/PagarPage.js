@@ -7,8 +7,8 @@ import Alert from 'react-bootstrap/Alert';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-import { auth } from '../firebase/firebaseConfig';
 
+import { auth } from '../firebase/firebaseConfig';
 
 import Navbar from './NavBar';
 
@@ -135,7 +135,7 @@ function PagarPage(){
             {showAlert && (
                 <div className="contenedor_alert_registro_exitoso">
                     <Alert key={"danger"} className="alerta_form_mal_datos_usuarios" variant={"danger"} onClose={() => setShowAlert(false)} dismissible>
-                        Por favor completar los Datos de Usuario.
+                        Por favor completar todos los Datos de Usuario.
                     </Alert>
                 </div>
             )}
