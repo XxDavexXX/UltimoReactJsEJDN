@@ -24,6 +24,8 @@ import Fotter from './Fotter';
 
 function Home() {
 
+    const [showAlert, setShowAlert] = useState(false);
+
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -36,18 +38,29 @@ function Home() {
         .then(
           () => {
             console.log('SUCCESS!');
+            setShowAlert(true);
+            resetFormFields();
           },
           (error) => {
             console.log('FAILED...', error.text);
           },
         );
     };
-    const enviarFormulario = () => {
-      form.current.submit(); 
+
+    const resetFormFields = () => {
+      form.current.reset(); // Reinicia los valores de los campos del formulario
     };
 
     return (
       <div>
+
+        {showAlert && (
+                <div className="contenedor_alert_registro_exitoso">
+                    <Alert key={"success"} className="alerta_form_mal_datos_usuarios" variant={"success"} onClose={() => setShowAlert(false)} dismissible>
+                        Correo enviado exitosamente.
+                    </Alert>
+                </div>
+        )}
 
         <Navbar />
 
