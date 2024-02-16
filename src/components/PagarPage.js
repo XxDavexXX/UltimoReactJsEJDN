@@ -111,8 +111,12 @@ function PagarPage(){
         })
         .then(
           () => {
-            console.log('SUCCESS!');
-            setShowAlert2(true)
+            if(!buttonDisabled){
+                console.log('SUCCESS!');
+                setShowAlert2(true)
+            }else{
+                console.log('Ya se ah enviado un correo!');
+            }
           },
           (error) => {
             console.log('FAILED...', error.text);
