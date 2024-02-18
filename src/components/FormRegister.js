@@ -57,7 +57,7 @@ function FormRegister() {
 
             // Realizar una solicitud a tu backend (Django) para verificar o crear el usuario
             // Puedes usar fetch o axios para hacer la solicitud HTTP
-            fetch('http://localhost:8000/api/registrar_usuario/', {
+            fetch('https://eljardindenaru.onrender.com/api/registrar_usuario/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ function FormRegister() {
             const uid = user.uid;
       
             // Registro de usuario en Django
-            fetch('http://localhost:8000/api/register_with_email_password/', {
+            fetch('https://eljardindenaru.onrender.com/api/register_with_email_password/', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

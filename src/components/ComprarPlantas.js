@@ -160,7 +160,7 @@ function ComprarPlantas() {
 
         const fetchPlantasTiposData = async () => {
             try {
-                const responsetipoplanta = await fetch('http://127.0.0.1:8000/tipo-planta/');
+                const responsetipoplanta = await fetch('https://eljardindenaru.onrender.com/tipo-planta/');
                 const datatipoplanta = await responsetipoplanta.json();
                 setPlantasTipos(datatipoplanta);
                 setLoading(false); // Marca como cargados los datos cuando la solicitud es exitosa
@@ -194,7 +194,7 @@ function ComprarPlantas() {
     const construirURL = (tiposSeleccionados) => {
         const currentMinVal = rangeInputMin.current.value;
         const currentMaxVal = rangeInputMax.current.value;
-        const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=${ultimaOpcionSeleccionada}&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
+        const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=${ultimaOpcionSeleccionada}&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
         const queryString = tiposSeleccionados.map(id => `tipo_planta_id=${id}`).join('&');
         return `${baseURL}&${queryString}`;
     };
@@ -233,7 +233,7 @@ function ComprarPlantas() {
     const construirURL2 = (tiposSeleccionados2) => {
         const currentMinVal2 = rangeInputMin2.current.value;
         const currentMaxVal2 = rangeInputMax2.current.value;
-        const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=${ultimaOpcionSeleccionada2}&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
+        const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=${ultimaOpcionSeleccionada2}&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
         const queryString = tiposSeleccionados2.map(id => `tipo_planta_id=${id}`).join('&');
         return `${baseURL}&${queryString}`;
     };
@@ -258,7 +258,7 @@ function ComprarPlantas() {
     const construirURLOrdenPrecioMenosMas = (tiposSeleccionados) => {
         const currentMinVal = rangeInputMin.current.value;
         const currentMaxVal = rangeInputMax.current.value;
-        const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=precio_menos_mas&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
+        const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=precio_menos_mas&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
         const queryString = tiposSeleccionados.map(id => `tipo_planta_id=${id}`).join('&');
         return `${baseURL}&${queryString}`;
     };
@@ -290,7 +290,7 @@ function ComprarPlantas() {
                     const construirURLOrdenPrecioMenosMas2 = (tiposSeleccionados2) => {
                         const currentMinVal2 = rangeInputMin2.current.value;
                         const currentMaxVal2 = rangeInputMax2.current.value;
-                        const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=precio_menos_mas&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
+                        const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=precio_menos_mas&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
                         const queryString = tiposSeleccionados2.map(id => `tipo_planta_id=${id}`).join('&');
                         return `${baseURL}&${queryString}`;
                     };
@@ -323,7 +323,7 @@ function ComprarPlantas() {
     const construirURLOrdenPrecioMasMenos = (tiposSeleccionados) => {
         const currentMinVal = rangeInputMin.current.value;
         const currentMaxVal = rangeInputMax.current.value;
-        const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=precio_mas_menos&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
+        const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=precio_mas_menos&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
         const queryString = tiposSeleccionados.map(id => `tipo_planta_id=${id}`).join('&');
         return `${baseURL}&${queryString}`;
     };
@@ -355,7 +355,7 @@ function ComprarPlantas() {
                 const construirURLOrdenPrecioMasMenos2 = (tiposSeleccionados2) => {
                     const currentMinVal2 = rangeInputMin2.current.value;
                     const currentMaxVal2 = rangeInputMax2.current.value;
-                    const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=precio_mas_menos&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
+                    const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=precio_mas_menos&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
                     const queryString = tiposSeleccionados2.map(id => `tipo_planta_id=${id}`).join('&');
                     return `${baseURL}&${queryString}`;
                 };
@@ -387,7 +387,7 @@ function ComprarPlantas() {
     const construirURLOrdenPorRelevancia = (tiposSeleccionados) => {
         const currentMinVal = rangeInputMin.current.value;
         const currentMaxVal = rangeInputMax.current.value;
-        const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=random_id&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
+        const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=random_id&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
         const queryString = tiposSeleccionados.map(id => `tipo_planta_id=${id}`).join('&');
         return `${baseURL}&${queryString}`;
     };
@@ -420,7 +420,7 @@ function ComprarPlantas() {
                 const construirURLOrdenPorRelevancia2 = (tiposSeleccionados2) => {
                     const currentMinVal2 = rangeInputMin2.current.value;
                     const currentMaxVal2 = rangeInputMax2.current.value;
-                    const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=random_id&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
+                    const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=random_id&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
                     const queryString = tiposSeleccionados2.map(id => `tipo_planta_id=${id}`).join('&');
                     return `${baseURL}&${queryString}`;
                 };
@@ -453,7 +453,7 @@ function ComprarPlantas() {
     const construirURLOrdenPorAlfabetoAtoZ = (tiposSeleccionados) => {
         const currentMinVal = rangeInputMin.current.value;
         const currentMaxVal = rangeInputMax.current.value;
-        const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=nombre_a_z&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
+        const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=nombre_a_z&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
         const queryString = tiposSeleccionados.map(id => `tipo_planta_id=${id}`).join('&');
         return `${baseURL}&${queryString}`;
     };
@@ -485,7 +485,7 @@ function ComprarPlantas() {
                 const construirURLOrdenPorAlfabetoAtoZ2 = (tiposSeleccionados2) => {
                     const currentMinVal2 = rangeInputMin2.current.value;
                     const currentMaxVal2 = rangeInputMax2.current.value;
-                    const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=nombre_a_z&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
+                    const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=nombre_a_z&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
                     const queryString = tiposSeleccionados2.map(id => `tipo_planta_id=${id}`).join('&');
                     return `${baseURL}&${queryString}`;
                 };
@@ -519,7 +519,7 @@ function ComprarPlantas() {
      const construirURLOrdenPorAlfabetoZtoA = (tiposSeleccionados) => {
         const currentMinVal = rangeInputMin.current.value;
         const currentMaxVal = rangeInputMax.current.value;
-        const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=nombre_z_a&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
+        const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=nombre_z_a&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
         const queryString = tiposSeleccionados.map(id => `tipo_planta_id=${id}`).join('&');
         return `${baseURL}&${queryString}`;
     };
@@ -551,7 +551,7 @@ function ComprarPlantas() {
                     const construirURLOrdenPorAlfabetoZtoA2 = (tiposSeleccionados2) => {
                         const currentMinVal2 = rangeInputMin2.current.value;
                         const currentMaxVal2 = rangeInputMax2.current.value;
-                        const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=nombre_z_a&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
+                        const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=nombre_z_a&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
                         const queryString = tiposSeleccionados2.map(id => `tipo_planta_id=${id}`).join('&');
                         return `${baseURL}&${queryString}`;
                     };
@@ -584,7 +584,7 @@ function ComprarPlantas() {
         const currentMinVal = rangeInputMin.current.value;
         const currentMaxVal = rangeInputMax.current.value;
 
-        const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=${ultimaOpcionSeleccionada}&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
+        const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=${ultimaOpcionSeleccionada}&min_price=${currentMinVal}&max_price=${currentMaxVal}`;
         const queryString = tiposSeleccionados.map(id => `tipo_planta_id=${id}`).join('&');
         return `${baseURL}&${queryString}`;
     };
@@ -616,7 +616,7 @@ function ComprarPlantas() {
         const currentMinVal2 = rangeInputMin2.current.value;
         const currentMaxVal2 = rangeInputMax2.current.value;
 
-        const baseURL = `http://127.0.0.1:8000/plantas-by-filters/?ordering=${ultimaOpcionSeleccionada2}&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
+        const baseURL = `https://eljardindenaru.onrender.com/plantas-by-filters/?ordering=${ultimaOpcionSeleccionada2}&min_price=${currentMinVal2}&max_price=${currentMaxVal2}`;
         const queryString = tiposSeleccionados2.map(id => `tipo_planta_id=${id}`).join('&');
         return `${baseURL}&${queryString}`;
     };

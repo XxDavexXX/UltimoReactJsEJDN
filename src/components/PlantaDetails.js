@@ -114,7 +114,7 @@ function Planta() {
 
 
   useEffect(() => {
-    fetch(`http://localhost:8000/plantas/${id}/${categoria}`)
+    fetch(`https://eljardindenaru.onrender.com/plantas/${id}/${categoria}`)
       .then((response) => response.json())
       .then((data) => setPlanta(data))
       .catch((error) => console.log(error));
@@ -135,14 +135,14 @@ function Planta() {
 
 
   useEffect(() => {
-    fetch(`http://localhost:8000/plantas/${categoria}`)
+    fetch(`https://eljardindenaru.onrender.com/plantas/${categoria}`)
       .then((response) => response.json())
       .then((data) => setPlantaCategorias(data))
       .catch((error) => console.log(error));
   }, [categoria]);
   
   useEffect(() => {
-    fetch(`http://localhost:8000/fotos_planta_maceta/planta/${id}/`)
+    fetch(`https://eljardindenaru.onrender.com/fotos_planta_maceta/planta/${id}/`)
       .then((response) => response.json())
       .then((data) => {
         setPlantaMaceta(data)

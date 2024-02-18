@@ -57,7 +57,7 @@ function Navbar() {
     
     useEffect(() => {
         if (uid_cod) {
-            fetch(`http://localhost:8000/usuarios/uid/${uid_cod}`)
+            fetch(`https://eljardindenaru.onrender.com/usuarios/uid/${uid_cod}`)
                 .then((response) => response.json())
                 .then((data) => setDatosUsuarios(data))
                 .catch((error) => console.log(error));
@@ -72,7 +72,7 @@ function Navbar() {
         // Aquí deberías tener una función que actualice la dirección de envío en la base de datos.
         // Por ejemplo, usando fetch o axios para enviar una solicitud PUT a tu API.
         // Asumamos que tienes una ruta en tu backend para actualizar la dirección de envío.
-        const response = await fetch(`http://localhost:8000/usuarios/${uid_cod}/`, {
+        const response = await fetch(`https://eljardindenaru.onrender.com/usuarios/${uid_cod}/`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ function Navbar() {
         // Aquí deberías tener una función que actualice la dirección de envío en la base de datos.
         // Por ejemplo, usando fetch o axios para enviar una solicitud PUT a tu API.
         // Asumamos que tienes una ruta en tu backend para actualizar la dirección de envío.
-        const response = await fetch(`http://localhost:8000/usuarios/${uid_cod}/nombre`, {
+        const response = await fetch(`https://eljardindenaru.onrender.com/usuarios/${uid_cod}/nombre`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ function Navbar() {
         // Aquí deberías tener una función que actualice la dirección de envío en la base de datos.
         // Por ejemplo, usando fetch o axios para enviar una solicitud PUT a tu API.
         // Asumamos que tienes una ruta en tu backend para actualizar la dirección de envío.
-        const response = await fetch(`http://localhost:8000/usuarios/${uid_cod}/telefono`, {
+        const response = await fetch(`https://eljardindenaru.onrender.com/usuarios/${uid_cod}/telefono`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

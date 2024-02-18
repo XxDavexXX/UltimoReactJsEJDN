@@ -51,7 +51,7 @@ function FormLogin() {
                     const photoURL = user.photoURL;
     
                     // Verificar si el correo electrónico está registrado en la base de datos
-                    fetch('http://localhost:8000/api/verificar_email/?email=' + email)
+                    fetch('https://eljardindenaru.onrender.com/api/verificar_email/?email=' + email)
                         .then(response => response.json())
                         .then(data => {
                             if (data.error) {
@@ -103,7 +103,7 @@ function FormLogin() {
         console.log(email, password);
     
         // Verificar si el correo electrónico está registrado en la base de datos
-        fetch('http://localhost:8000/api/verificar_email/?email=' + email)
+        fetch('https://eljardindenaru.onrender.com/api/verificar_email/?email=' + email)
             .then(response => response.json())
             .then(data => {
                 if (data.error) {

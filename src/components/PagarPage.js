@@ -36,7 +36,7 @@ function PagarPage(){
     const delivery = 12;
 
     useEffect(() => {
-        fetch(`http://localhost:8000/fotos_planta_maceta/planta/${id}/${macetaplanta}`)
+        fetch(`https://eljardindenaru.onrender.com/fotos_planta_maceta/planta/${id}/${macetaplanta}`)
           .then((response) => response.json())
           .then((data) => {
             setPlantaMaceta(data);
@@ -49,7 +49,7 @@ function PagarPage(){
 
     
     useEffect(() => {
-        fetch(`http://localhost:8000/macetas/${idmaceta}`)
+        fetch(`https://eljardindenaru.onrender.com/macetas/${idmaceta}`)
           .then((response) => response.json())
           .then((data) => setMaceta(data))
           .catch((error) => {
@@ -81,7 +81,7 @@ function PagarPage(){
 
     useEffect(() => {
         if (uid_cod) {
-            fetch(`http://localhost:8000/usuarios/uid/${uid_cod}`)
+            fetch(`https://eljardindenaru.onrender.com/usuarios/uid/${uid_cod}`)
                 .then((response) => response.json())
                 .then((data) => setDatosUsuarios(data))
                 .catch((error) => {
@@ -91,7 +91,7 @@ function PagarPage(){
     }, [uid_cod]);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/plantas/${id}/${categoria}`)
+    fetch(`https://eljardindenaru.onrender.com/plantas/${id}/${categoria}`)
       .then((response) => response.json())
       .then((data) => setPlanta(data))
       .catch((error) => {
