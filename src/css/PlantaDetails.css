@@ -8,6 +8,10 @@
     width: 100%;
 }
 
+.contenedor_btn_comprar_pd_cosas_plants{
+    text-decoration: none;
+}
+
 .content_pd_details{
     overflow-x: hidden;
 }
