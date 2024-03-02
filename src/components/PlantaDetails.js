@@ -306,10 +306,9 @@ function Planta() {
                                             alt={registro.planta || 'Cargando ...'}
                                             onClick={() => handleClick(registro)}
                                         />
-                                        {registro.maceta_precio === 0 && (
-                                            <span style={{width:'100%', display:'flex', justifyContent:'center', color:'red', fontFamily:'a', fontSize:'19px'}}>Gratis</span>
+                                        {registro.maceta_precio === 0 || registro.maceta_precio === '0.00' || registro.maceta_precio === '0' || registro.maceta_precio === 0.00 && (
+                                            <span style={{ width: '100%', display: 'flex', justifyContent: 'center', color: 'red', fontFamily: 'a', fontSize: '19px' }}>Gratis</span>
                                         )}
-    
                                     </li>
                                 ))}
                             </ul>
