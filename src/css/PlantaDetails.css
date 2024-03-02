@@ -422,6 +422,19 @@ filter: brightness(70%);
     display: none;
   }
 
+.loader_pd_center{
+    top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.no_top_px{
+    top: 0 !important;
+}
+
+.top_non_px div {
+    top: 0 !important;
+}
+
 
 @media (max-width: 1760px) {
     .product_ecomerce_pd {
